@@ -30,9 +30,11 @@ class Car():
         else:
             return True
 
+
 class IncorrectVinNumber(Exception):
     def __init__(self, vin_message):
         self.vin_message = vin_message
+
 
 class IncorrectCarNumbers(Exception):
     def __init__(self, car_num_message):
@@ -40,46 +42,46 @@ class IncorrectCarNumbers(Exception):
 
 
 try:
-    mazda = Car('Mazda', 1123940, 'f123gg')
-except IncorrectVinNumber as e_1:
-    print(e_1.vin_message)
-except IncorrectCarNumbers as e_2:
-    print(e_2.car_num_message)
+    first = Car('Toyota', 1000000, 'f123gg')
+except IncorrectVinNumber as exc:
+    print(exc.vin_message)
+except IncorrectCarNumbers as exc:
+    print(exc.car_num_message)
 else:
-    print(f'{mazda.model} успешно создан!')
+    print(f'{first.model} успешно создан!')
 
 try:
-    c2 = Car('FastCar', 1123940, 'o54dd')
-except IncorrectVinNumber as e_1:
-    print(e_1.vin_message)
-except IncorrectCarNumbers as e_2:
-    print(e_2.car_num_message)
+    second = Car('Model2', 300, 'т001тр')
+except IncorrectVinNumber as exc:
+    print(exc.vin_message)
+except IncorrectCarNumbers as exc:
+    print(exc.car_num_message)
 else:
-    print(f'{c2.model} успешно создан!')
+    print(f'{second.model} успешно создан')
 
 try:
-    c3 = Car('BestMotors', 'wow', 'o132xx')
-except IncorrectVinNumber as e_1:
-    print(e_1.vin_message)
-except IncorrectCarNumbers as e_2:
-    print(e_2.car_num_message)
+    third = Car('Model3', 2020202, 'нет номера')
+except IncorrectVinNumber as exc:
+    print(exc.vin_message)
+except IncorrectCarNumbers as exc:
+    print(exc.car_num_message)
 else:
-    print(f'{c3.model} успешно создан!')
+    print(f'{third.model} успешно создан')
 
 try:
-    c4 = Car('BestMotors', 7654321, '1ABV13')
-except IncorrectVinNumber as e_1:
-    print(e_1.vin_message)
-except IncorrectCarNumbers as e_2:
-    print(e_2.car_num_message)
+    c4 = Car('Baltiyec', 7654321, '1ABV13')
+except IncorrectVinNumber as exc:
+    print(exc.vin_message)
+except IncorrectCarNumbers as exc:
+    print(exc.car_num_message)
 else:
     print(f'{c4.model} успешно создан!')
 
 try:
-    c5 = Car('BestMotors', 1234567, '123456')
-except IncorrectVinNumber as e_1:
-    print(e_1.vin_message)
-except IncorrectCarNumbers as e_2:
-    print(e_2.car_num_message)
+    c5 = Car('BMW', 1234567, '123456')
+except IncorrectVinNumber as exc:
+    print(exc.vin_message)
+except IncorrectCarNumbers as exc:
+    print(exc.car_num_message)
 else:
     print(f'{c5.model} успешно создан!')
